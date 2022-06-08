@@ -2,7 +2,7 @@ class ApplicationHelper::Button::VmNativeConsole < ApplicationHelper::Button::Ba
   needs :@record
 
   def visible?
-    @record.vendor == 'redhat'
+    @record.vendor == 'redhat' || @record.vendor == 'ibm_power_vs'
   end
 
   def disabled?
